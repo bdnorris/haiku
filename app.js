@@ -32,34 +32,53 @@ $(document).ready(function() {
         console.log ("Sevens: " + sevensLength);
         
         // Get a random number in those length
-        var fivesRand = Math.floor(Math.random()*fivesLength)
-        console.log ("Five Random: " + fivesRand);
+        //var fivesRand1 = 44
+        var fivesRand1 = Math.floor(Math.random()*fivesLength)
+        console.log ("Five Random: " + fivesRand1);
+        
         var sevensRand = Math.floor(Math.random()*sevensLength)
         console.log ("Seven Random: " + sevensRand);
+        
+        //var fivesRand2 = 44
+        var fivesRand2 = Math.floor(Math.random()*fivesLength)
+        
+        // double check and make sure you're not getting the same random number for 1st and 3rd lines
+        if (fivesRand1 == fivesRand2) {
+            var fivesRand2 = Math.floor(Math.random()*fivesLength)
+            //var fivesRand2 = 44
+            if (fivesRand1 == fivesRand2) {
+                var fivesRand2 = Math.floor(Math.random()*fivesLength)
+            }
+        }
+        
+        console.log ("Five Random: " + fivesRand2);
         
         
         
 
         // My random div
-        var holder = document.getElementById('random');
+        var holder1 = document.getElementById('random1');
+        var holder2 = document.getElementById('random2');
+        var holder3 = document.getElementById('random3');
         // Put a 5 in the holder
-        holder.textContent = fives[fivesRand].gsx$phrase.$t;
+        holder1.textContent = fives[fivesRand1].gsx$phrase.$t;
         // Put a 7 in the holder
-        holder.textContent = sevens[sevensRand].gsx$phrase.$t;
+        holder2.textContent = sevens[sevensRand].gsx$phrase.$t;
         // Put a 5 in the holder
-        holder.textContent = fives[fivesRand].gsx$phrase.$t;
+        holder3.textContent = fives[fivesRand2].gsx$phrase.$t;
         
         
         
         
         // PRINT STUFF OUT TO TEST
+        /*
         $(fives).each(function(){
              $('.resultFive').prepend('<h4>'+this.gsx$syllable.$t+' '+this.gsx$phrase.$t+'</h4>');
         });
         $(sevens).each(function(){
              $('.resultSeven').prepend('<h4>'+this.gsx$syllable.$t+' '+this.gsx$phrase.$t+'</h4>');
         });
-        
+        */
         
       })
       .fail(function( jqxhr, textStatus, error ) {
