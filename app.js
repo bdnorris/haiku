@@ -4,26 +4,26 @@
  // Make sure it is public or set to Anyone with link can view 
  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json&amp;callback=x";
  
- $.getJSON(url, function(data) {
- 
-  var entry = data.feed.entry;
-     
 
-     
-    // var randomValue = entry[Math.floor(Math.random() * entry.length)];
-     var holder = document.getElementById('random')
-     var numberOfPhrases = (entry.length);
-     var randomNumber = Math.floor((Math.random() * numberOfPhrases) + 0);
-     holder.textContent = entry[randomNumber].gsx$phrase.$t;
-     //holder.textContent = entry[5];
-
-     console.debug(entry);
-     
-     // get all from JSON
-  $(entry).each(function(){
-    // Column names are name, age, etc.
-    $('.results').prepend('<h2>'+this.gsx$phrase.$t+'</h2><p>'+this.gsx$syllable.$t+'</p>');
-  });
- 
- });
+$.getJSON( url, { } )
+  .done(function( json ) {
+    var entries = json.feed.entry;
+    
+    var newArray;
+    newArray = jQuery.grep(entries, function( a ) {
+        return this.gsx$syllable !== 5;
+    });
+    
+    var holder = document.getElementById('random');
+    
+    console.debug(entries);
+    
+    $(newArray).each(function(){
+         $('.results').prepend('<h2>'+this.gsx$syllable.$t+' '+this.gsx$phrase.$t+'</h2>');
+    });
+  })
+  .fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+});
  
