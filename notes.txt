@@ -1,0 +1,11 @@
+1wEJwYgjuz6Nd65As-6NOjaYrihDS9T2YVz2zrghBF6U
+
+https://spreadsheets.google.com/feeds/list/1wEJwYgjuz6Nd65As-6NOjaYrihDS9T2YVz2zrghBF6U/od6/public/values?alt=json-in-script&callback=x
+
+https://spreadsheets.google.com/feeds/list/SPREADSHEET/od6/public/basic?alt=json
+
+
+https://spreadsheets.google.com/feeds/list/1wEJwYgjuz6Nd65As-6NOjaYrihDS9T2YVz2zrghBF6U/od6/public/basic?alt=json
+
+
+http://ctrlq.org/code/20004-google-spreadsheets-json
