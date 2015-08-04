@@ -58,6 +58,24 @@ $(document).ready(function() {
         // Put another 5 in the holder
         holder3.textContent = fives[fivesRand2].gsx$phrase.$t;
         
+        
+        // CHANGE ON CLICK
+        // NEED TO ADD CHECKS TO MAKE SURE IT DOESN'T JUST REPLACE IT WITH THE SAME THING
+        function changeFive() {
+            var fivesRand = randomNumber(0, fives.length);
+            return newLine = fives[fivesRand].gsx$phrase.$t;
+        }
+        function changeSeven() {
+            var sevensRand = randomNumber(0, sevens.length);
+            return newLine = sevens[sevensRand].gsx$phrase.$t;
+        }
+        $(".five").click(function() {
+            this.textContent = changeFive();
+        });
+        $(".seven").click(function() {
+            this.textContent = changeSeven();
+        });
+        
         // PRINT STUFF OUT TO TEST
         /*
         $(fives).each(function(){
