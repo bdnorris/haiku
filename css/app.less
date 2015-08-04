@@ -1,6 +1,66 @@
 @import url("normalize.css");
 
+///////////////////////////
+//------ VARIABLES ------//
+///////////////////////////
+
+@blue: #0077c0;
+
+.transition {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+
+///////////////////////////
+//----- RESPONSIVE -----//
+///////////////////////////
+
+body {
+    box-sizing: border-box;
+}
+
+section {
+    background-color:#dedede;
+    padding:1em;
+}
+
+section::before, section::after {
+    content: " ";
+    display: table;
+}
+
+section::after {clear:both;}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+///////////////////////////
+//------- SPECIFIC -------//
+///////////////////////////
+
 a {
     font-size:2em;
     pointer:cursor;
+}
+
+section#theHaiku {
+    text-align: center;
+    
+    
+    max-width: 33em;
+    width:100%;
+    margin:20% auto 0 auto;
+    
+    a {
+        font-size:1.6rem;
+        display:block;
+        margin-bottom:0.5em;
+    }
 }
