@@ -1,5 +1,4 @@
 # haiku
-Haiku Generator
+Haiku Generator that pulls lines from a Google spreadsheet.
 
-Learning GITHUB
-etc.
+Fun project for learning some javascript and GitHub.
