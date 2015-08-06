@@ -73,11 +73,24 @@ $.getJSON( url, { } )
             }
             $(".five").click(function() {
                 this.textContent = changeFive();
+                return false;
             });
             $(".seven").click(function() {
                 this.textContent = changeSeven();
+                return false;
             });
-
+/*            $('.five').on({
+    mouseover: function(){
+        $(this).css({filter: 'blur(2px)'});
+    },
+     mouseleave: function(){
+        $(this).css({filter: 'blur(0)'});
+    },
+    click: function(){
+        $(this).off({filter: 'blur(0)'});
+    }
+});
+*/
 
         });
 
