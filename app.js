@@ -56,7 +56,7 @@ $.getJSON( url, { } )
                 n = $('#controls input:checked' ).length;
                 console.log(n);
             });
-            console.log(n);
+            //console.log(n);
             
  
             // if clean use clean arrays
@@ -94,7 +94,7 @@ $.getJSON( url, { } )
             var holder3 = document.getElementById('random3');
 
 
-            if (n = 1) {
+            if (n == 1) {
                 
 
             // Put a 5 in the holder
@@ -104,16 +104,7 @@ $.getJSON( url, { } )
             // Put another 5 in the holder
             holder3.textContent = cleanFives[cleanfivesRand2].gsx$phrase.$t;
                 
-                            // CHANGE ON CLICK
-            // NEED TO ADD CHECKS TO MAKE SURE IT DOESN'T JUST REPLACE IT WITH THE SAME THING
-                function changeCleanFive() {
-                    var cleanfivesRand = randomNumber(0, cleanFives.length);
-                    return cleanFives[cleanfivesRand].gsx$phrase.$t;
-                }
-                function changeCleanSeven() {
-                    var cleansevensRand = randomNumber(0, cleanSevens.length);
-                    return cleanSevens[cleansevensRand].gsx$phrase.$t;
-                }
+                         
             }
             else {
                 
@@ -125,7 +116,21 @@ $.getJSON( url, { } )
             // Put another 5 in the holder
             holder3.textContent = fives[fivesRand2].gsx$phrase.$t;
                 
-                            // CHANGE ON CLICK
+
+            }
+            
+            
+               // CHANGE ON CLICK
+            // NEED TO ADD CHECKS TO MAKE SURE IT DOESN'T JUST REPLACE IT WITH THE SAME THING
+                function changeCleanFive() {
+                    var cleanfivesRand = randomNumber(0, cleanFives.length);
+                    return cleanFives[cleanfivesRand].gsx$phrase.$t;
+                }
+                function changeCleanSeven() {
+                    var cleansevensRand = randomNumber(0, cleanSevens.length);
+                    return cleanSevens[cleansevensRand].gsx$phrase.$t;
+                }
+                                        // CHANGE ON CLICK
             // NEED TO ADD CHECKS TO MAKE SURE IT DOESN'T JUST REPLACE IT WITH THE SAME THING
                 function changeFive() {
                     var fivesRand = randomNumber(0, fives.length);
@@ -135,11 +140,10 @@ $.getJSON( url, { } )
                     var sevensRand = randomNumber(0, sevens.length);
                     return sevens[sevensRand].gsx$phrase.$t;
                 }
-            }
             
             
                 $(".five").click(function() {
-                    if (n = 1) {
+                    if (n == 1) {
                         this.textContent = changeCleanFive();
                     } else {
                         this.textContent = changeFive();
@@ -147,7 +151,7 @@ $.getJSON( url, { } )
                     return false;
                 });
                 $(".seven").click(function() {
-                    if (n = 1) {
+                    if (n == 1) {
                         this.textContent = changeCleanSeven();
                     } else {
                         this.textContent = changeSeven();
@@ -155,17 +159,18 @@ $.getJSON( url, { } )
                     return false;
                 });
 
-                $("#refresh").click(function() {
-                    if (n = 'tuna') {
+                $("#refresh").on('click', function() {
+                    //alert(n);
+                    if (n == 1) {
                         holder1.textContent = changeCleanFive();
                         holder2.textContent = changeCleanFive();
                         holder3.textContent = changeCleanSeven();
-                        console.log('clean function');
+                        //console.log('clean function');
                     } else {
                         holder1.textContent = changeFive();
                         holder2.textContent = changeFive();
                         holder3.textContent = changeSeven();
-                        console.log('dirty function');
+                        //console.log('dirty function');
                     }
                     
                     //return false;
