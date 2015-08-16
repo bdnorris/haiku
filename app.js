@@ -38,6 +38,18 @@ $.getJSON( url, { } )
                     return value.gsx$syllable.$t == 7;
                 }
             });
+            
+            
+            /* 
+            
+            INSTEAD of making seperate complete and clean arrays, can I somehow key the dirty lines to their id #s, then make arrays of the numbers rather than the entire lines?
+            
+            */
+            
+            
+            
+            
+            
 
             // Get the lengths of each array
             console.log ("Fives: " + fives.length);
