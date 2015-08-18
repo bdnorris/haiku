@@ -200,5 +200,19 @@ $.getJSON( url, { } )
 
 // ANGULAR 
 
-var app = angular.module('haiku', []);
 
+(function() {
+var app = angular.module('haiku', [ ]);
+
+    app.controller('HaikuController', function() {
+       
+        // need to make an object that contains the initial 3 lines
+        var someObjectThatHoldsTheHaiku = {
+            line1: 'something',
+            line2: 'else',
+            line3: 'happens',
+        }
+        this.lines = someObjectThatHoldsTheHaiku;
+        
+    });
+})();

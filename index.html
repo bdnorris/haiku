@@ -17,10 +17,17 @@
     </head>
     <body >
         
-        <section id="theHaiku">
+        <section id="theHaiku" ng-controller="HaikuController as haiku">
             <button id="random1" class="five"></button>
             <button id="random2" class="seven"></button>
             <button id="random3" class="five"></button>
+            
+            <br>
+            <h2>Angular</h2>
+            <button id="" class="five">{{haiku.lines.line1}}</button>
+            <button id="" class="seven">{{haiku.lines.line2}}</button>
+            <button id="" class="five">{{haiku.lines.line3}}</button>
+            
             
             
                     <form id="controls">
